@@ -10,27 +10,32 @@
 </head>
 <body>
 
- <select name="" id="">
-     <option value="">Active</option>
-     <option value="">Retired</option>
-     <option value="">details</option>
-
- </select>
- <button>load</button>
-
    <div id="content">
-       <table>
+      
+
+
+<center>
+    <select name="status" id="status" aria-placeholder="select">
+  <option value="active">active</option>
+  <option value="retired">retired</option>
+  <option value="unknown">unknown</option>
+  <option value="destroyed">destroyed</option>
+</select>
+<button>load</button>
+     <table class="border-black border-2">
            <thead>
-               <tr>
-                   <th>capsule id</th>
-                   <th>no of mission</th>
-                   <th>details</th>
+               <tr class="border-black border-2">
+                   <th class="border-r-2 border-black">capsule id</th>
+                   <th class="border-r-2 border-black">no of mission</th>
+                   <th class="border-r-2 border-black">details</th>
                </tr>
            </thead>
-           <tbody id = "tbody">
+           <tbody id = "tbody" class="border-r-2 border-black">
 
            </tbody>
        </table>
+</center>
+      
    </div>
     <script src="fetch.js"></script>
 </body>
