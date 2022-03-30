@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <main>
+      <aside>
+        <div class="selectBlock">
+          <label for="json">Choose any</label>
+          <select id="json" name="cars">
+            <option value="active">Active</option>
+            <option value="retired">Retired</option>
+            <option value="unknown">unknown</option>
+            <option value="destroyed">Destroyed</option>
+          </select>
+          <button id="load">LOAD</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Capsule Id</th>
+              <th>No of Messages</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody id="table"></tbody>
+        </table>
+      </aside>
+    </main>
 
-   <div id="content">
-      
-
-
-<center>
-    <select name="status" id="status" aria-placeholder="select">
-  <option value="active">active</option>
-  <option value="retired">retired</option>
-  <option value="unknown">unknown</option>
-  <option value="destroyed">destroyed</option>
-</select>
-<button>load</button>
-     <table class="border-black border-2">
-           <thead>
-               <tr class="border-black border-2">
-                   <th class="border-r-2 border-black">capsule id</th>
-                   <th class="border-r-2 border-black">no of mission</th>
-                   <th class="border-r-2 border-black">details</th>
-               </tr>
-           </thead>
-           <tbody id = "tbody" class="border-r-2 border-black">
-
-           </tbody>
-       </table>
-</center>
-      
-   </div>
-    <script src="fetch.js"></script>
-</body>
+    <script src="./fetch.js"></script>
+  </body>
 </html>

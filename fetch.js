@@ -1,29 +1,31 @@
-var container = document.getElementById("content");
-var tableData = document.getElementById("tbody");
-var getData = document.getElementById("status");
+let Load = document.getElementById("load");
+Load.addEventListener("click", async e => {
+  let fetching = await window.fetch("./db.json");
+  let data = await fetching.json();
+  let table_section = document.getElementById("table");
+  console.log(data);
+  let json = document.getElementById("json");
+  let x = json.value;
+  console.log(x);
 
-const fetchData = async () => {
-  try {
-    const res = await fetch("db.json");
-    data = await res.json();
-    console.log(data);
-    {
-      getData.addEventListener("click", function (e) {
-        data.map(x => {
-          return (tableData.innerHTML += `
-       <tr>
-       <td >${x.capsule_id}</td>
-       <td>${x.missions[0].flight}</td>
-       <td>${x.details}</td>
-       </tr>
-      
-        `);
-        });
-      });
+  let filtered = data.filter((value, index) => {
+    if (value.status === `${x}`) {
+      return value;
     }
-  } catch (e) {
-    console.log(e);
+  });
+  console.log(filtered);
+  let output = " ";
+  for (let value of filtered) {
+    output += `
+        <tr>
+        <td>${value.capsule_id}</td>
+         <td>${value.missions.length}</td>
+          <td>${value.details}</td>
+        </tr>
+        `;
   }
-};
+  table_section.innerHTML = output;
+});
 
+let fetchData = async () => {};
 fetchData();

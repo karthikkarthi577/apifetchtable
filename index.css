@@ -1,0 +1,41 @@
+table,
+th,
+tr {
+  border: 1px solid #111;
+  border-collapse: collapse;
+}
+td {
+  border-right: 1px solid #111;
+  padding: 5px 0;
+  text-align: center;
+}
+
+th {
+  padding: 5px 0;
+  background-color: rgb(139 139 231);
+}
+table {
+  margin-top: 40px;
+}
+main {
+  width: 100%;
+  margin-top: 20px;
+}
+main aside {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.selectBlock {
+  margin: 0 auto;
+}
+.selectBlock button {
+  background-color: blue;
+  color: #fff;
+  border: none;
+  height: 20px;
+  padding: 2px 5px;
+  margin-left: 10px;
+}
